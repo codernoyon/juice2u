@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail DB</title>
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- header section start -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+            <div class="container pe-4">
+              <a class="navbar-brand logo" href="#"><img src="./image/logo.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servie</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header section end -->
+
+    <!-- search section start -->
+    <section>
+        <div class="container mt-5">
+            <div class="row justify-content-center mt-5">
+                <div class="col-11 col-md-8 col-lg-5 mt-5">
+                    <div class="form my-3 d-flex align-items-center">
+                        <input placeholder="Search your drink" class="" type="text" name="name" id="inputField">
+                        <button onclick="loadData()" class="custom-btn">Search</button>
+                    </div>
+                    <p id="input-empty" class="d-none text-danger text-center fs-4">Please write something to search 😐</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- search section end -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 order-last order-md-first">
+                    <div id="item-container" class="item-container g-3 row  align-items-start">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div id="item-details-container">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/app.js"></script>
+</body>
+</html>
