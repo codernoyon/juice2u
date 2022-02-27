@@ -97,6 +97,19 @@
     margin-bottom: .5rem;
     border-radius: .3rem;
     overflow: hidden;
+    position: relative;
+}
+
+.item-details .full-photo .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
 }
 
 .hightlight{

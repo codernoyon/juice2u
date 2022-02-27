@@ -72,11 +72,13 @@ const drinksFullinfo = drinkId => {
 
 const drinkFullifoDisplay = drinkInfo => {
     const fullDetails = document.getElementById("item-details-container");
+    fullDetails.style.display = "block";
     fullDetails.textContent = "";
     fullDetails.innerHTML = `
                 <div class="item-details">
                     <div class="full-photo">
                         <img src="${drinkInfo.strDrinkThumb}" alt="" class="w-100">
+                        <button onclick="closefullDetails()" class="close-btn"><i class='bx bx-x'></i></button>
                     </div>
                     <h3 class="mb-2">${drinkInfo.strDrink}</h3>
                     <small class="mb-2">Type <span class="hightlight">${drinkInfo.strAlcoholic}</span></small>
@@ -93,4 +95,10 @@ const drinkFullifoDisplay = drinkInfo => {
                 </div>
     `;
     console.log(drinkInfo);
+};
+
+
+function closefullDetails(){
+    const fullDetails = document.getElementById("item-details-container");
+    fullDetails.style.display = "none";
 }
