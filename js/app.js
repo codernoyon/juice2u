@@ -59,7 +59,7 @@ const displayData = dataList => {
         const div = document.createElement("div");
         div.className = "col-md-6 justify-content-around d-flex ";
         div.innerHTML = `
-        <h2 class ="text-warning text-center" >Drink not found!!</div>
+        <h2 class ="text-warning text-center" >No Matched found!!</div>
         `;
         itemContainer.appendChild(div);
         document.getElementById("item-details-container").textContent = "";
