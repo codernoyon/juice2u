@@ -8,19 +8,30 @@ window.onscroll = () => {
     }
 };
 
+function toggeleSpinner(displayStyle) {
+    document.getElementById("spinner").style.display = displayStyle;
+}
 
 
 
+
+// on load window
 const intialLoad = () => {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=s")
+    toggeleSpinner("none")
+
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=m")
         .then(res => res.json())
         .then(data => displayData(data));
+    toggeleSpinner("flex");
+    
 };
 
 intialLoad();
 
 
+
 const loadData = () => {
+    toggeleSpinner("flex")
     const inputField = document.getElementById("inputField");
     const inputEmptyError = document.getElementById("input-empty");
     const inputText = inputField.value;
@@ -52,6 +63,8 @@ const displayData = dataList => {
         `;
         itemContainer.appendChild(div);
         document.getElementById("item-details-container").textContent = "";
+        toggeleSpinner("none")
+
     } else {
         drinks.forEach(drink => {
             const div = document.createElement("div");
@@ -67,6 +80,7 @@ const displayData = dataList => {
             `;
             itemContainer.appendChild(div);
             // console.log(drink);
+            toggeleSpinner("none")
         });
     }
     
@@ -96,16 +110,20 @@ const drinkFullifoDisplay = drinkInfo => {
                     <h6>Cetogory: ${drinkInfo.strCategory}</h6>
                     <p class="text-muted">${drinkInfo.strInstructions}</p>
                     <p>Ingredients:
-                        <span class="hightlight-2">${drinkInfo.strIngredient1}</span>
-                        <span class="hightlight-2">${drinkInfo.strIngredient2}</span>
-                        <span class="hightlight-2">${drinkInfo.strIngredient3}</span>
-                        <span class="hightlight-2">${drinkInfo.strIngredient4}</span>
-                        <span class="hightlight-2">${drinkInfo.strIngredient5}</span>
-                        <span class="hightlight-2">${drinkInfo.strIngredient6}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient1 ? drinkInfo.strIngredient1: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient2 ? drinkInfo.strIngredient2: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient3 ? drinkInfo.strIngredient3: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient4 ? drinkInfo.strIngredient4: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient5 ? drinkInfo.strIngredient5: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient6 ? drinkInfo.strIngredient6: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient7 ? drinkInfo.strIngredient7: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient8 ? drinkInfo.strIngredient8: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient9 ? drinkInfo.strIngredient9: ""}</span>
+                        <span class="hightlight-2">${drinkInfo.strIngredient10 ? drinkInfo.strIngredient10: ""}</span>
                     </p>
                 </div>
     `;
-    console.log(drinkInfo);
+    // console.log(drinkInfo);
 };
 
 
