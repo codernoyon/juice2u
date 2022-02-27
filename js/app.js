@@ -37,6 +37,7 @@ const loadData = () => {
     const inputText = inputField.value;
     inputField.value = "";
     if (inputText === "") {
+        toggeleSpinner("none")
         inputEmptyError.classList.remove("d-none");
     } else {
         const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputText}`;
