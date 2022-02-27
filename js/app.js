@@ -9,6 +9,17 @@ window.onscroll = () => {
 };
 
 
+
+
+const intialLoad = () => {
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=s")
+        .then(res => res.json())
+        .then(data => displayData(data));
+};
+
+intialLoad();
+
+
 const loadData = () => {
     const inputField = document.getElementById("inputField");
     const inputEmptyError = document.getElementById("input-empty");
