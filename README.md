@@ -2,7 +2,6 @@
 <img src='./screenshots/laptop-view.png'>
 
 
-
 ## Connect With Me ☕!
 
 <a style='display: inline-block;background: #1877F2; color: white; padding:10px 20px; text-decoration:none; margin-bottom: 5px' href='https://www.facebook/codernoyon'>Facebook</a>
