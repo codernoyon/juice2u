@@ -148,3 +148,21 @@
 #spinner img{
     width: 500px;
 }
+
+.footer{
+    background: #0B0D17;
+}
+
+.footer .footer-photo{
+    width: 100px;
+    margin-bottom: .5rem;
+}
+
+.footer p{
+    color: white
+}
+
+.footer p a{
+    color: #F08D27;
+    text-decoration: none;
+}
