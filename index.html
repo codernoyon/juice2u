@@ -51,7 +51,7 @@
                 <div class="col-11 col-md-8 col-lg-5 mt-5">
                     <div class="form my-3 d-flex align-items-center">
                         <input placeholder="Search your drink" class="" type="text" name="name" id="inputField">
-                        <button onclick="loadData()" class="custom-btn">Search</button>
+                        <button id="search-btn" onclick="loadData()" class="custom-btn">Search</button>
                     </div>
                     <p id="input-empty" class="d-none text-danger text-center fs-4">Please write something to search 😐</p>
                 </div>
@@ -63,7 +63,7 @@
     <!-- items secton start -->
     <section class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row min-vh-100">
                 <div class="col-md-8 order-last order-md-first">
                     <div id="item-container" class="item-container g-3 row  align-items-start px-3 px-md-0">
                     </div>

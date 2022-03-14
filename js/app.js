@@ -7,12 +7,27 @@ window.onscroll = () => {
         navBar.classList.remove("shadow-sm")
     }
 };
-
+// browser loading spinner
 function toggeleSpinner(displayStyle) {
     document.getElementById("spinner").style.display = displayStyle;
 }
 
+// click enter to search
 
+const searchBtn = document.getElementById("search-btn");
+const searchInput = document.getElementById("inputField");
+
+searchInput.addEventListener("keypress", function (event) {
+    
+    // event.preventDefault();
+    // console.log("key is trigired", event.key);
+
+    if (event.key == "Enter") {
+        searchBtn.click();
+        // console.log("iside clicked");
+    }
+        
+});
 
 
 // on load window
